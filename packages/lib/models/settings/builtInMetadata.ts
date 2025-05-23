@@ -1227,6 +1227,18 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			isGlobal: true,
 		},
 
+		'window.title.template': {
+			value: '"${Notebook}( - )${Subnotebook}${Search}${Tag}( - )${Note}( - )Joplin"',
+			type: SettingItemType.String,
+			public: true,
+			appTypes: [AppType.Desktop],
+			section: 'appearance',
+			label: () => _('Window Title Template'),
+			description: () => _('Customize the application window title. Available placeholders: ${Notebook}, ${Subnotebook}, ${Note}, ${Tag}, ${Search}, ${Profile}.'),
+			storage: SettingStorage.File,
+			isGlobal: false,
+		},
+
 		'sync.clearLocalSyncStateButton': {
 			value: null as null,
 			type: SettingItemType.Button,

@@ -317,6 +317,60 @@ const SettingComponent: React.FC<Props> = props => {
 					<div style={{ width: inputStyle.width, minWidth: inputStyle.minWidth }}>
 						{descriptionComp}
 					</div>
+					{props.settingKey === 'window.title.template' && (
+						<div style={{ marginTop: '10px', marginBottom: '10px' }}>
+							<p style={{ fontWeight: 'bold' }}>{_('Template Examples:')}</p>
+							<table style={{ width: '100%', borderCollapse: 'collapse' }}>
+								<thead>
+									<tr>
+										<th style={{ border: '1px solid #c0c0c0', padding: '5px', textAlign: 'left' }}>{_('Template')}</th>
+										<th style={{ border: '1px solid #c0c0c0', padding: '5px', textAlign: 'left' }}>{_('All Notes')}</th>
+										<th style={{ border: '1px solid #c0c0c0', padding: '5px', textAlign: 'left' }}>{_('Empty Notebook / Trash')}</th>
+										<th style={{ border: '1px solid #c0c0c0', padding: '5px', textAlign: 'left' }}>{_('Sub-notebook')}</th>
+										<th style={{ border: '1px solid #c0c0c0', padding: '5px', textAlign: 'left' }}>{_('Tag')}</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('${Notebook}( - )${Subnotebook}${Search}${Tag}( - )${Note}( - )Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('All Notes - Note 1 - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Trash - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Notebook - Subnotebook - Note 2 - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('NixOSTag - NixOSNote - Joplin')}</td>
+									</tr>
+									<tr>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('${Notebook}(\\)${Subnotebook}${Search}${Tag}(\\)${Note}( - )Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('All Notes\\Note 1 - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Trash - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Notebook\\Subnotebook\\Note 2 - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('NixOSTag\\NixOSNote - Joplin')}</td>
+									</tr>
+									<tr>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('${Notebook}( > )${Subnotebook}${Search}${Tag}( > )${Note}( - )Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('All Notes > Note 1 - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Trash - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Notebook > Subnotebook > Note 2 - Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('NixOSTag > NixOSNote - Joplin')}</td>
+									</tr>
+									<tr>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin( :: )${Notebook}( : )${Subnotebook}${Search}${Tag}( : )${Note}')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin :: All Notes : Note 1')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin :: Trash')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin :: Notebook:Subnotebook : Note 2')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin :: NixOSTag : NixOSNote')}</td>
+									</tr>
+									<tr>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin')}</td>
+										<td style={{ border: '1px solid #c0c0c0', padding: '5px' }}>{_('Joplin')}</td>
+									</tr>
+								</tbody>
+							</table>
+							<p style={{ marginTop: '5px', fontSize: 'smaller' }}>{_('TODO: add profile template field Joplin( (${Profile}) )')}</p>
+						</div>
+					)}
 				</div>
 			);
 		}
