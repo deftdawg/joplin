@@ -116,7 +116,7 @@ export function renderWindowTitle(args: RenderWindowTitleArgs): string {
             newTitleParts.push(title.substring(lastIndex, match.index)); // Add text before match
 
             const prefix = match[1] || '';
-            const placeholderFound = match[2]; // Should always be the placeholder like ${Note}
+            // const placeholderFound = match[2]; // Should always be the placeholder like ${Note} // Removed as unused
             const suffix = match[3] || '';
 
             if (p.value) {

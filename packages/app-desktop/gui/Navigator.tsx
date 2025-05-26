@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import Setting from '@joplin/lib/models/Setting';
-import { AppState, AppStateRoute, NoteEntity, FolderEntity, TagEntity } from '../app.reducer';
+import { AppState, AppStateRoute } from '../app.reducer';
+import { NoteEntity, FolderEntity, TagEntity } from '@joplin/lib/services/database/types';
 import bridge from '../services/bridge';
-import { useContext, useEffect, useMemo, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { WindowIdContext } from './NewWindowOrIFrame';
 import { renderWindowTitle } from './windowTitleUtils';
 import { ALL_NOTES_FILTER_ID } from '@joplin/lib/reserved-ids';
